@@ -13,4 +13,15 @@ return require('packer').startup(function(use)
    requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- Rose-pine color scheme
+  use ({
+	'rose-pine/neovim',
+	as = 'rose-pine',
+	config = function ()
+		vim.cmd('colorscheme rose-pine')
+	end
+  })
+
+  -- Nvim-Treesitter 
+  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 end)
